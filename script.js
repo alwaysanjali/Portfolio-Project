@@ -1,43 +1,49 @@
-/* =========================================
-   SELECT ELEMENTS
-========================================= */
+/* =========================
+   ELEMENTS
+========================= */
 
-const contactForm = document.querySelector("#contactForm");
+const contactForm =
+    document.querySelector("#contactForm");
 
-const menuToggle = document.querySelector(".menu-toggle");
+const menuToggle =
+    document.querySelector(".menu-toggle");
 
-const navLinks = document.querySelector(".nav-links");
+const navLinks =
+    document.querySelector(".nav-links");
 
-const navItems = document.querySelectorAll(".nav-links a");
+const navItems =
+    document.querySelectorAll(".nav-links a");
 
-const scrollTopButton = document.querySelector("#scrollTop");
+const themeToggle =
+    document.querySelector("#themeToggle");
 
-const themeToggle = document.querySelector("#themeToggle");
+const scrollTopButton =
+    document.querySelector("#scrollTop");
 
-const sections = document.querySelectorAll("section[id]");
+const sections =
+    document.querySelectorAll("section[id]");
 
 
-/* =========================================
-   MOBILE NAVIGATION MENU
-========================================= */
+/* =========================
+   MOBILE MENU
+========================= */
 
 menuToggle.addEventListener("click", function () {
 
     navLinks.classList.toggle("active");
 
-    const icon = menuToggle.querySelector("i");
+    const icon =
+        menuToggle.querySelector("i");
 
 
     if (navLinks.classList.contains("active")) {
 
         icon.classList.remove("fa-bars");
-
         icon.classList.add("fa-xmark");
 
     } else {
 
         icon.classList.remove("fa-xmark");
-
         icon.classList.add("fa-bars");
 
     }
@@ -45,7 +51,7 @@ menuToggle.addEventListener("click", function () {
 });
 
 
-/* Close mobile menu after clicking */
+/* Close menu after clicking link */
 
 navItems.forEach(function (item) {
 
@@ -53,10 +59,10 @@ navItems.forEach(function (item) {
 
         navLinks.classList.remove("active");
 
-        const icon = menuToggle.querySelector("i");
+        const icon =
+            menuToggle.querySelector("i");
 
         icon.classList.remove("fa-xmark");
-
         icon.classList.add("fa-bars");
 
     });
@@ -64,133 +70,145 @@ navItems.forEach(function (item) {
 });
 
 
-/* =========================================
+/* =========================
    DARK / LIGHT MODE
-========================================= */
+========================= */
 
 themeToggle.addEventListener("click", function () {
 
     document.body.classList.toggle("dark-mode");
 
-    const icon = themeToggle.querySelector("i");
+    const icon =
+        themeToggle.querySelector("i");
 
 
-    if (document.body.classList.contains("dark-mode")) {
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
 
         icon.classList.remove("fa-moon");
-
         icon.classList.add("fa-sun");
 
-        localStorage.setItem("theme", "dark");
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
 
     } else {
 
         icon.classList.remove("fa-sun");
-
         icon.classList.add("fa-moon");
 
-        localStorage.setItem("theme", "light");
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
 
     }
 
 });
 
 
-/* =========================================
-   REMEMBER THEME
-========================================= */
+/* Load saved theme */
 
-const savedTheme = localStorage.getItem("theme");
+const savedTheme =
+    localStorage.getItem("theme");
 
 
 if (savedTheme === "dark") {
 
     document.body.classList.add("dark-mode");
 
-    const icon = themeToggle.querySelector("i");
+    const icon =
+        themeToggle.querySelector("i");
 
     icon.classList.remove("fa-moon");
-
     icon.classList.add("fa-sun");
 
 }
 
 
-/* =========================================
-   ACTIVE NAVIGATION LINK
-========================================= */
+/* =========================
+   ACTIVE NAV LINK
+========================= */
 
-window.addEventListener("scroll", function () {
+window.addEventListener(
+    "scroll",
+    function () {
 
-    let currentSection = "";
-
-
-    sections.forEach(function (section) {
-
-        const sectionTop =
-            section.offsetTop - 150;
+        let currentSection = "";
 
 
-        if (window.scrollY >= sectionTop) {
+        sections.forEach(function (section) {
 
-            currentSection =
-                section.getAttribute("id");
-
-        }
-
-    });
+            const sectionTop =
+                section.offsetTop - 160;
 
 
-    navItems.forEach(function (item) {
+            if (window.scrollY >= sectionTop) {
 
-        item.classList.remove("active");
-
-
-        if (
-            item.getAttribute("href") ===
-            "#" + currentSection
-        ) {
-
-            item.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-/* =========================================
-   SCROLL REVEAL ANIMATION
-========================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer = new IntersectionObserver(
-
-    function (entries) {
-
-        entries.forEach(function (entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                observer.unobserve(entry.target);
+                currentSection =
+                    section.getAttribute("id");
 
             }
 
         });
 
-    },
 
-    {
-        threshold: 0.15
+        navItems.forEach(function (item) {
+
+            item.classList.remove("active");
+
+
+            if (
+                item.getAttribute("href") ===
+                "#" + currentSection
+            ) {
+
+                item.classList.add("active");
+
+            }
+
+        });
+
     }
-
 );
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
 
 
 revealElements.forEach(function (element) {
@@ -200,9 +218,9 @@ revealElements.forEach(function (element) {
 });
 
 
-/* =========================================
+/* =========================
    CONTACT FORM VALIDATION
-========================================= */
+========================= */
 
 contactForm.addEventListener(
     "submit",
@@ -224,7 +242,7 @@ contactForm.addEventListener(
         let isValid = true;
 
 
-        /* ---------- NAME ---------- */
+        /* NAME */
 
         if (name.value.trim() === "") {
 
@@ -242,7 +260,7 @@ contactForm.addEventListener(
         }
 
 
-        /* ---------- EMAIL ---------- */
+        /* EMAIL */
 
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -277,7 +295,7 @@ contactForm.addEventListener(
         }
 
 
-        /* ---------- MESSAGE ---------- */
+        /* MESSAGE */
 
         if (message.value.trim() === "") {
 
@@ -306,7 +324,7 @@ contactForm.addEventListener(
         }
 
 
-        /* ---------- SUCCESS ---------- */
+        /* SUCCESS */
 
         if (isValid) {
 
@@ -314,17 +332,13 @@ contactForm.addEventListener(
                 "Thank you! Your message has been submitted."
             );
 
-
             contactForm.reset();
-
 
             document
                 .querySelectorAll(".success")
                 .forEach(function (element) {
 
-                    element.classList.remove(
-                        "success"
-                    );
+                    element.classList.remove("success");
 
                 });
 
@@ -334,14 +348,13 @@ contactForm.addEventListener(
 );
 
 
-/* =========================================
-   SHOW ERROR
-========================================= */
+/* =========================
+   FORM ERROR
+========================= */
 
 function showError(input, message) {
 
     input.classList.remove("success");
-
     input.classList.add("error");
 
 
@@ -350,19 +363,19 @@ function showError(input, message) {
             .querySelector(".error-message");
 
 
-    errorMessage.textContent = message;
+    errorMessage.textContent =
+        message;
 
 }
 
 
-/* =========================================
-   SHOW SUCCESS
-========================================= */
+/* =========================
+   FORM SUCCESS
+========================= */
 
 function showSuccess(input) {
 
     input.classList.remove("error");
-
     input.classList.add("success");
 
 
@@ -376,9 +389,9 @@ function showSuccess(input) {
 }
 
 
-/* =========================================
+/* =========================
    SCROLL TO TOP
-========================================= */
+========================= */
 
 window.addEventListener(
     "scroll",
@@ -403,11 +416,8 @@ scrollTopButton.addEventListener(
     function () {
 
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
 
     }
