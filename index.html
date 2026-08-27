@@ -5,23 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anjali | Web Developer</title>
+    <title>Anjali Pandey | Web Developer</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,739 +27,249 @@
     <!-- ================= NAVBAR ================= -->
 
     <header>
-
         <nav class="navbar">
 
             <a href="#home" class="logo">
                 Anjali<span>.</span>
             </a>
 
-            <div class="nav-right">
+            <button class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-                <button
-                    class="theme-toggle"
-                    id="themeToggle"
-                    aria-label="Toggle dark mode"
-                >
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-
-                <button
-                    class="menu-toggle"
-                    aria-label="Open menu"
-                >
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-            </div>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home" class="active">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
         </nav>
-
     </header>
 
 
-    <main>
+    <!-- ================= HERO ================= -->
 
-        <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
 
-        <section id="home" class="hero">
+        <div class="hero-content">
 
-            <div class="hero-content">
+            <p class="hello">Hello, I'm</p>
 
-                <p class="hello">
-                    Hello, I'm
-                </p>
+            <h1>Anjali Pandey</h1>
 
-                <h1>
-                    Anjali Pandey
-                </h1>
+            <h2>Web Developer</h2>
 
-                <h2>
-                    Web Developer
-                </h2>
+            <p>
+                I am a BCA student passionate about web development
+                and creating modern, responsive and user-friendly websites.
+            </p>
 
-                <p class="hero-text">
+            <div class="hero-buttons">
 
-                    I am a BCA student passionate about web development
-                    and creating modern, responsive and user-friendly websites.
+                <a href="#contact" class="btn">
+                    Contact Me
+                </a>
 
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#contact" class="btn">
-                        Contact Me
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <a
-                        href="resume.pdf"
-                        class="btn btn-outline"
-                        download
-                    >
-                        Download Resume
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-
-                </div>
-
-                <div class="social-icons">
-
-                    <a
-                        href="https://github.com/alwaysanjali"
-                        target="_blank"
-                        aria-label="GitHub"
-                    >
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/"
-                        target="_blank"
-                        aria-label="LinkedIn"
-                    >
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-
-                    <a
-                        href="#contact"
-                        aria-label="Email"
-                    >
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-
-                </div>
+                <a href="#skills" class="btn btn-outline">
+                    My Skills
+                </a>
 
             </div>
 
+        </div>
 
-            <div class="hero-image">
 
-                <div class="image-circle">
+        <div class="hero-image">
 
-                    <img
-                        src="images/profile.jpg"
-                        alt="Anjali Pandey"
-                    >
+            <img src="images/profile.jpg"
+                alt="Anjali Pandey Profile">
 
-                </div>
+        </div>
 
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <h2>About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am currently pursuing BCA and have a strong interest
+                in web development and frontend technologies.
+            </p>
+
+            <p>
+                I enjoy creating responsive and user-friendly websites
+                and continuously improving my programming and development
+                skills through practical projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
             </div>
 
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section
-            id="about"
-            class="section reveal"
-        >
-
-            <div class="section-heading">
-
-                <p>Get To Know Me</p>
-
-                <h2>
-                    About <span>Me</span>
-                </h2>
-
+            <div class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
             </div>
 
-
-            <div class="about-grid">
-
-                <div class="about-card">
-
-                    <i class="fa-solid fa-code"></i>
-
-                    <h3>
-                        Web Development
-                    </h3>
-
-                    <p>
-
-                        I enjoy creating modern and responsive websites
-                        using HTML, CSS, JavaScript and React.js.
-
-                    </p>
-
-                </div>
-
-
-                <div class="about-content">
-
-                    <p>
-
-                        I am currently pursuing BCA and have a strong interest
-                        in web development. I enjoy building responsive and
-                        user-friendly websites.
-
-                    </p>
-
-                    <p>
-
-                        I am continuously improving my skills by learning
-                        modern technologies and working on practical projects.
-
-                    </p>
-
-                    <a href="#contact" class="btn">
-                        Let's Connect
-                    </a>
-
-                </div>
-
+            <div class="skill">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
             </div>
 
-        </section>
-
-
-        <!-- ================= SKILLS ================= -->
-
-        <section
-            id="skills"
-            class="section skills-section reveal"
-        >
-
-            <div class="section-heading">
-
-                <p>What I Know</p>
-
-                <h2>
-                    My <span>Skills</span>
-                </h2>
-
+            <div class="skill">
+                <i class="fa-brands fa-react"></i>
+                <span>React.js</span>
             </div>
 
-
-            <div class="skills-container">
-
-                <div class="skill">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML5</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-react"></i>
-                    <h3>React.js</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <h3>Bootstrap</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-wind"></i>
-                    <h3>Tailwind CSS</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>MongoDB</h3>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <h3>Git & GitHub</h3>
-                </div>
-
+            <div class="skill">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span>Bootstrap</span>
             </div>
 
-        </section>
-
-
-        <!-- ================= PROJECTS ================= -->
-
-        <section
-            id="projects"
-            class="section projects-section reveal"
-        >
-
-            <div class="section-heading">
-
-                <p>My Recent Work</p>
-
-                <h2>
-                    Featured <span>Projects</span>
-                </h2>
-
-                <p class="section-description">
-
-                    A collection of projects that showcase my
-                    web development skills and practical learning.
-
-                </p>
-
+            <div class="skill">
+                <i class="fa-solid fa-wind"></i>
+                <span>Tailwind CSS</span>
             </div>
 
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-cloud-sun"></i>
-                        </div>
-
-                        <div class="project-links">
-
-                            <a
-                                href="https://github.com/alwaysanjali"
-                                target="_blank"
-                                aria-label="GitHub"
-                            >
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-
-                            <a
-                                href="#"
-                                aria-label="Live Demo"
-                            >
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <h3>
-                        Weather App
-                    </h3>
-
-                    <p>
-
-                        A responsive weather application that displays
-                        temperature, humidity, wind speed and weather
-                        conditions using API integration.
-
-                    </p>
-
-
-                    <div class="project-tech">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>API</span>
-
-                    </div>
-
-
-                    <div class="project-buttons">
-
-                        <a
-                            href="https://github.com/alwaysanjali"
-                            target="_blank"
-                            class="project-btn"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-
-                        <a
-                            href="#"
-                            class="project-btn demo-btn"
-                        >
-                            Live Demo
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 2 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-list-check"></i>
-                        </div>
-
-                        <div class="project-links">
-
-                            <a
-                                href="https://github.com/alwaysanjali"
-                                target="_blank"
-                                aria-label="GitHub"
-                            >
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-
-                            <a
-                                href="#"
-                                aria-label="Live Demo"
-                            >
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <h3>
-                        Todo App
-                    </h3>
-
-                    <p>
-
-                        An interactive Todo application for adding,
-                        managing and completing tasks with a clean
-                        responsive user interface.
-
-                    </p>
-
-
-                    <div class="project-tech">
-
-                        <span>React</span>
-                        <span>JavaScript</span>
-                        <span>CSS</span>
-
-                    </div>
-
-
-                    <div class="project-buttons">
-
-                        <a
-                            href="https://github.com/alwaysanjali"
-                            target="_blank"
-                            class="project-btn"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-
-                        <a
-                            href="#"
-                            class="project-btn demo-btn"
-                        >
-                            Live Demo
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 3 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-clipboard-question"></i>
-                        </div>
-
-                        <div class="project-links">
-
-                            <a
-                                href="https://github.com/alwaysanjali"
-                                target="_blank"
-                                aria-label="GitHub"
-                            >
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-
-                            <a
-                                href="#"
-                                aria-label="Live Demo"
-                            >
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <h3>
-                        Quiz App
-                    </h3>
-
-                    <p>
-
-                        An interactive quiz application built with
-                        React.js featuring dynamic questions,
-                        state management and responsive design.
-
-                    </p>
-
-
-                    <div class="project-tech">
-
-                        <span>React</span>
-                        <span>JavaScript</span>
-                        <span>CSS</span>
-
-                    </div>
-
-
-                    <div class="project-buttons">
-
-                        <a
-                            href="https://github.com/alwaysanjali"
-                            target="_blank"
-                            class="project-btn"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-
-                        <a
-                            href="#"
-                            class="project-btn demo-btn"
-                        >
-                            Live Demo
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 4 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-
-                        <div class="project-links">
-
-                            <a
-                                href="https://github.com/alwaysanjali"
-                                target="_blank"
-                                aria-label="GitHub"
-                            >
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-
-                            <a
-                                href="#"
-                                aria-label="Live Demo"
-                            >
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <h3>
-                        Password Generator
-                    </h3>
-
-                    <p>
-
-                        A JavaScript-based password generator that
-                        creates customizable passwords through an
-                        interactive and responsive interface.
-
-                    </p>
-
-
-                    <div class="project-tech">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-
-                    <div class="project-buttons">
-
-                        <a
-                            href="https://github.com/alwaysanjali"
-                            target="_blank"
-                            class="project-btn"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            GitHub
-                        </a>
-
-                        <a
-                            href="#"
-                            class="project-btn demo-btn"
-                        >
-                            Live Demo
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
+            <div class="skill">
+                <i class="fa-solid fa-database"></i>
+                <span>MongoDB</span>
             </div>
 
-        </section>
-
-
-        <!-- ================= EDUCATION ================= -->
-
-        <section
-            id="education"
-            class="section education-section reveal"
-        >
-
-            <div class="section-heading">
-
-                <p>My Academic Journey</p>
-
-                <h2>
-                    My <span>Education</span>
-                </h2>
-
+            <div class="skill">
+                <i class="fa-solid fa-code"></i>
+                <span>Web Development</span>
             </div>
 
+        </div>
 
-            <div class="education-container">
-
-
-                <!-- BCA -->
-
-                <div class="education-card">
-
-                    <div class="education-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-
-                    <div class="education-content">
-
-                        <span>
-                            Bachelor's Degree
-                        </span>
-
-                        <h3>
-                            Bachelor of Computer Applications
-                        </h3>
-
-                        <h4>
-                            BCA
-                        </h4>
-
-                        <p>
-
-                            Currently pursuing BCA with a strong interest
-                            in web development, programming and modern
-                            technologies.
-
-                        </p>
-
-                    </div>
-
-                </div>
+    </section>
 
 
-                <!-- 12th -->
+    <!-- ================= CONTACT ================= -->
 
-                <div class="education-card">
+    <section id="contact" class="section">
 
-                    <div class="education-icon">
-                        <i class="fa-solid fa-school"></i>
-                    </div>
+        <h2>Contact Me</h2>
 
-                    <div class="education-content">
-
-                        <span>
-                            Senior Secondary
-                        </span>
-
-                        <h3>
-                            Class 12th
-                        </h3>
-
-                        <h4>
-                            Senior Secondary Education
-                        </h4>
-
-                        <p>
-
-                            Completed senior secondary education with
-                            an interest in computer science and technology.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
+        <p class="contact-intro">
+            Feel free to connect with me through my social profiles or email.
+        </p>
 
 
-            <!-- RESUME -->
+        <!-- Social Links -->
 
-            <div class="resume-box">
+        <div class="social-links">
 
-                <div>
+            <!-- GitHub -->
+            <a href="https://github.com/alwaysanjali"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link">
 
-                    <h3>
-                        Interested in my profile?
-                    </h3>
+                <i class="fa-brands fa-github"></i>
 
-                    <p>
-                        Download my resume to know more about my
-                        skills, education and projects.
-                    </p>
+                <span>GitHub</span>
 
-                </div>
+            </a>
 
-                <a
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/anjali-pandey-55b666327?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <span>LinkedIn</span>
+
+            </a>
+
+
+            <!-- Email -->
+            <a href="anjalirpandey2004@gmail.com"
+                class="social-link">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <span>Email</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- Contact Form -->
+
+        <form class="contact-form" id="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required></textarea>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Anjali Pandey. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
