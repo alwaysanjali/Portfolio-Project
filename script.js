@@ -4,15 +4,17 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 
 
-// Open / Close Mobile Menu
+// Open and close mobile menu
 
 menuBtn.addEventListener("click", function () {
 
-    navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.toggle("active");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
 
     const icon = menuBtn.querySelector("i");
 
-    if (navLinks.classList.contains("active")) {
+    if (isOpen) {
 
         icon.classList.remove("fa-bars");
         icon.classList.add("fa-xmark");
@@ -27,7 +29,7 @@ menuBtn.addEventListener("click", function () {
 });
 
 
-// Close menu after clicking a navigation link
+// Close mobile menu after clicking a link
 
 const navItems = document.querySelectorAll(".nav-links a");
 
@@ -36,6 +38,8 @@ navItems.forEach(function (link) {
     link.addEventListener("click", function () {
 
         navLinks.classList.remove("active");
+
+        menuBtn.setAttribute("aria-expanded", "false");
 
         const icon = menuBtn.querySelector("i");
 
@@ -56,11 +60,13 @@ contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
+
     const email = document.getElementById("email").value.trim();
+
     const message = document.getElementById("message").value.trim();
 
 
-    // Basic validation
+    // Name validation
 
     if (name === "") {
 
@@ -70,6 +76,8 @@ contactForm.addEventListener("submit", function (event) {
     }
 
 
+    // Email validation
+
     if (email === "") {
 
         alert("Please enter your email.");
@@ -77,6 +85,8 @@ contactForm.addEventListener("submit", function (event) {
         return;
     }
 
+
+    // Message validation
 
     if (message === "") {
 
@@ -95,7 +105,7 @@ contactForm.addEventListener("submit", function (event) {
     );
 
 
-    // Clear form
+    // Reset form
 
     contactForm.reset();
 
